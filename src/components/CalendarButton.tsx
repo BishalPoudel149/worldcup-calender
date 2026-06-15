@@ -9,9 +9,12 @@ interface CalendarButtonProps {
 export default function CalendarButton({ host }: CalendarButtonProps) {
   const [copied, setCopied] = useState(false);
 
-  const icsUrl = `https://${host}/api/calendar.ics`;
-  const webcalUrl = `webcal://${host}/api/calendar.ics`;
-  const googleUrl = `https://calendar.google.com/calendar/render?cid=${encodeURIComponent(icsUrl)}`;
+  // Strip port for production URLs (Vercel), keep for localhost dev
+  const cleanHost = host.replace(/:443$/, '');
+  const icsUrl = `https://${cleanHost}/api/calendar.ics`;
+  const webcalUrl = `webcal://${cleanHost}/api/calendar.ics`;
+  // Google Calendar requires the URL passed as-is (not double-encoded)
+  const googleUrl = `https://calendar.google.com/calendar/r?cid=${icsUrl}`;
 
   async function copyLink() {
     await navigator.clipboard.writeText(icsUrl);
