@@ -20,6 +20,10 @@ export const metadata: Metadata = {
     title: 'FIFA World Cup 2026 — Match Calendar',
     description: 'Add all 104 World Cup 2026 matches to your calendar in one click.',
     type: 'website',
+    url: 'https://worldcup-calender.vercel.app',
+  },
+  twitter: {
+    card: 'summary_large_image',
   },
 };
 
