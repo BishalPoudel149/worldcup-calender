@@ -1,7 +1,7 @@
 import type { Match } from '@/lib/types';
 import type { Venue } from '@/lib/types';
 import MatchCard from './MatchCard';
-import { formatMatchDate } from '@/lib/match-utils';
+import LocalDate from './LocalDate';
 
 interface MatchGroupProps {
   date: string;
@@ -10,10 +10,12 @@ interface MatchGroupProps {
 }
 
 export default function MatchGroup({ date, matches, venues }: MatchGroupProps) {
+  // Use the first match's UTC time so the date header reflects the user's local date
+  const firstMatchUtc = matches[0].startUtc;
   return (
     <section>
       <h2 className="mb-3 text-sm font-semibold uppercase tracking-widest text-gray-400">
-        {formatMatchDate(date)}
+        <LocalDate utc={firstMatchUtc} />
       </h2>
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {matches.map((match) => (

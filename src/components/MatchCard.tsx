@@ -1,7 +1,8 @@
 import type { Match } from '@/lib/types';
 import type { Venue } from '@/lib/types';
-import { formatMatchTime, formatGroupStageLabel } from '@/lib/match-utils';
+import { formatGroupStageLabel } from '@/lib/match-utils';
 import { TEAMS } from '@/data/teams';
+import LocalTime from './LocalTime';
 
 interface MatchCardProps {
   match: Match;
@@ -36,7 +37,7 @@ export default function MatchCard({ match, venue }: MatchCardProps) {
         <span className={`inline-block rounded-full border px-2.5 py-0.5 text-xs font-medium ${stageClass}`}>
           {formatGroupStageLabel(match)}
         </span>
-        <span className="text-sm text-gray-400 tabular-nums">{formatMatchTime(match.startUtc)}</span>
+        <span className="text-sm text-gray-400 tabular-nums"><LocalTime utc={match.startUtc} /></span>
       </div>
 
       <div className="flex items-center gap-3">
