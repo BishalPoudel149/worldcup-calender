@@ -71,26 +71,25 @@ export default function CalendarButton({ host }: CalendarButtonProps) {
             <ol className="space-y-1.5 list-none">
               <li className="flex gap-2 items-start">
                 <span className="flex-shrink-0 w-5 h-5 rounded-full bg-green-700 text-xs flex items-center justify-center font-bold mt-0.5">1</span>
-                <span>Tap the button below to download the <strong>.ics file</strong></span>
+                <span>Tap the button below</span>
               </li>
               <li className="flex gap-2 items-start">
                 <span className="flex-shrink-0 w-5 h-5 rounded-full bg-green-700 text-xs flex items-center justify-center font-bold mt-0.5">2</span>
-                <span>Open your <strong>Files / Downloads</strong> app → tap <strong>worldcup2026.ics</strong></span>
+                <span>Android will ask which app to open it with → choose <strong>Google Calendar</strong></span>
               </li>
               <li className="flex gap-2 items-start">
                 <span className="flex-shrink-0 w-5 h-5 rounded-full bg-green-700 text-xs flex items-center justify-center font-bold mt-0.5">3</span>
-                <span>Android will ask which app to open it with → choose <strong>Google Calendar</strong> → tap <strong>Import</strong></span>
+                <span>Tap <strong>Import</strong> — all matches are added instantly</span>
               </li>
             </ol>
             <a
               href="/api/calendar.ics"
-              download="worldcup2026.ics"
               className="inline-flex items-center gap-2 mt-1 rounded-lg bg-green-700 px-4 py-2 text-sm font-semibold text-white hover:bg-green-600 transition-colors"
             >
               <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M19 9h-4V3H9v6H5l7 7 7-7zm-8 2V5h2v6h1.17L12 13.17 9.83 11H11zm-6 8h14v2H5z" />
+                <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H5V8h14v13z" />
               </svg>
-              Download worldcup2026.ics
+              Open in Google Calendar
             </a>
           </div>
 
