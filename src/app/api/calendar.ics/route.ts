@@ -20,7 +20,7 @@ export async function GET(request: NextRequest) {
     status: 200,
     headers: {
       'Content-Type': 'text/calendar; charset=utf-8',
-      'Content-Disposition': 'inline; filename="worldcup2026.ics"',
+      'Content-Disposition': 'attachment; filename="worldcup2026.ics"',
       'Cache-Control': 'public, max-age=43200',
     },
   });

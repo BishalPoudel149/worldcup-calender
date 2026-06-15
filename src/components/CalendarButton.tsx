@@ -10,8 +10,8 @@ export default function CalendarButton({ host }: CalendarButtonProps) {
   const [copied, setCopied] = useState(false);
 
   const cleanHost = host.replace(/:443$/, '');
-  const icsUrl = `https://${cleanHost}/api/calendar.ics`;
   const webcalUrl = `webcal://${cleanHost}/api/calendar.ics`;
+  const icsUrl = `https://${cleanHost}/api/calendar.ics`;
 
   async function copyLink() {
     await navigator.clipboard.writeText(icsUrl);
@@ -32,15 +32,16 @@ export default function CalendarButton({ host }: CalendarButtonProps) {
         Apple Calendar
       </a>
 
-      {/* Android — no download attr, inline MIME triggers "Open with" dialog for any calendar app */}
+      {/* Google Calendar — download .ics, Android opens with Google Calendar */}
       <a
         href="/api/calendar.ics"
+        download="worldcup2026.ics"
         className="flex items-center gap-1.5 rounded-lg bg-blue-600 px-3 py-2 text-sm font-medium text-white hover:bg-blue-500 transition-colors"
       >
         <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
           <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H5V8h14v13zM7 10h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2zm-8 3h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2z" />
         </svg>
-        Add to Calendar (Android)
+        Google Calendar
       </a>
 
       {/* Copy link */}

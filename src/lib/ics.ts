@@ -11,27 +11,11 @@ function addMinutes(isoUtc: string, minutes: number): string {
 }
 
 function escapeText(str: string): string {
+  // Only escape backslash and semicolon — skip comma escaping
+  // as some native Android parsers (Mi/Poco) choke on \,
   return str
     .replace(/\\/g, '\\\\')
-    .replace(/,/g, '\\,')
-    .replace(/;/g, '\\;')
-    .replace(/\n/g, '\\n');
-}
-
-function foldLine(line: string): string {
-  const bytes = Buffer.from(line, 'utf8');
-  if (bytes.length <= 75) return line;
-  const chunks: string[] = [];
-  let start = 0;
-  while (start < bytes.length) {
-    const limit = start === 0 ? 75 : 74;
-    let end = start + limit;
-    // ensure we don't split a multi-byte sequence
-    while (end < bytes.length && (bytes[end] & 0xc0) === 0x80) end--;
-    chunks.push(bytes.slice(start, end).toString('utf8'));
-    start = end;
-  }
-  return chunks.join('\r\n ');
+    .replace(/;/g, '\\;');
 }
 
 function formatStageName(match: Match): string {
@@ -55,36 +39,28 @@ export function generateICS(matches: Match[]): string {
     'VERSION:2.0',
     'PRODID:-//WorldCup2026Calendar//EN',
     'X-WR-CALNAME:FIFA World Cup 2026',
-    'X-WR-CALDESC:Full match schedule for the 2026 FIFA World Cup',
-    'X-WR-TIMEZONE:UTC',
     'CALSCALE:GREGORIAN',
     'METHOD:PUBLISH',
-    'REFRESH-INTERVAL;VALUE=DURATION:PT12H',
-    'X-PUBLISHED-TTL:PT12H',
   ];
 
   for (const match of matches) {
     const venue = VENUES[match.venueId];
     const summary = `${match.homeLabel} vs ${match.awayLabel}`;
     const stageLabel = formatStageName(match);
-    const description = [
-      'FIFA World Cup 2026',
-      stageLabel,
-      `${venue.name}\\, ${venue.city}`,
-      'All times in UTC',
-    ].join('\\n');
+    // Keep description short and on one line — no folding needed, no special chars
+    const description = `FIFA World Cup 2026 - ${stageLabel} - ${venue.city}`;
+    // Location without escaping commas — plain text
+    const location = `${venue.name} - ${venue.city} - ${venue.country}`;
 
     lines.push('BEGIN:VEVENT');
-    lines.push(foldLine(`UID:${match.id}@worldcup2026.app`));
+    lines.push(`UID:${match.id}@worldcup2026.app`);
     lines.push(`DTSTAMP:${now}`);
     lines.push(`DTSTART:${formatUtcDate(match.startUtc)}`);
     lines.push(`DTEND:${addMinutes(match.startUtc, match.durationMinutes)}`);
-    lines.push(foldLine(`SUMMARY:⚽ ${escapeText(summary)}`));
-    lines.push(foldLine(`DESCRIPTION:${description}`));
-    lines.push(foldLine(`LOCATION:${escapeText(`${venue.name}, ${venue.city}, ${venue.country}`)}`));
-    lines.push(`GEO:${venue.lat};${venue.lon}`);
+    lines.push(`SUMMARY:${escapeText(summary)}`);
+    lines.push(`DESCRIPTION:${escapeText(description)}`);
+    lines.push(`LOCATION:${escapeText(location)}`);
     lines.push('STATUS:CONFIRMED');
-    lines.push(foldLine(`CATEGORIES:FIFA World Cup 2026,${stageLabel}`));
     lines.push('END:VEVENT');
   }
 
