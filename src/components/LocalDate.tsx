@@ -3,6 +3,6 @@
 export default function LocalDate({ utc }: { utc: string }) {
   const d = new Date(utc);
   return (
-    <>{d.toLocaleDateString([], { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</>
+    <>{d.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</>
   );
 }

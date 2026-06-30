@@ -2,10 +2,9 @@ import { Suspense } from 'react';
 import { headers } from 'next/headers';
 import { MATCHES } from '@/data/matches';
 import { VENUES } from '@/data/venues';
-import { groupMatchesByDate } from '@/lib/match-utils';
 import type { Stage } from '@/lib/types';
 import CalendarButton from '@/components/CalendarButton';
-import MatchGroup from '@/components/MatchGroup';
+import MatchList from '@/components/MatchList';
 import StageFilter from '@/components/StageFilter';
 
 interface PageProps {
@@ -20,8 +19,6 @@ export default async function Home({ searchParams }: PageProps) {
   let matches = MATCHES;
   if (stageFilter) matches = matches.filter((m) => m.stage === stageFilter);
   if (groupFilter) matches = matches.filter((m) => m.group === groupFilter);
-
-  const matchesByDate = groupMatchesByDate(matches);
 
   const headersList = await headers();
   const host = headersList.get('host') ?? 'localhost:3000';
@@ -59,21 +56,11 @@ export default async function Home({ searchParams }: PageProps) {
           Showing <span className="text-gray-300 font-medium">{matches.length}</span> matches
           {stageFilter && <span> · filtered by stage</span>}
           {groupFilter && <span> · Group {groupFilter}</span>}
-          <span className="ml-2 text-gray-600">— All times in UTC</span>
+          <span className="ml-2 text-gray-600">— All times in your local timezone</span>
         </p>
 
         {/* Match list */}
-        {matchesByDate.size === 0 ? (
-          <div className="rounded-xl border border-gray-700 bg-gray-800 p-12 text-center text-gray-400">
-            No matches found for the selected filter.
-          </div>
-        ) : (
-          <div className="space-y-8">
-            {[...matchesByDate.entries()].map(([date, dateMatches]) => (
-              <MatchGroup key={date} date={date} matches={dateMatches} venues={VENUES} />
-            ))}
-          </div>
-        )}
+        <MatchList matches={matches} venues={VENUES} />
       </main>
 
       <footer className="mt-12 border-t border-gray-800 py-6 text-center text-xs text-gray-600">

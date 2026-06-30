@@ -39,7 +39,7 @@ export const TEAMS: Record<string, Team> = {
   ESP: { code: 'ESP', name: 'Spain', group: 'H', flagEmoji: '🇪🇸' },
   KSA: { code: 'KSA', name: 'Saudi Arabia', group: 'H', flagEmoji: '🇸🇦' },
   URU: { code: 'URU', name: 'Uruguay', group: 'H', flagEmoji: '🇺🇾' },
-  CPV: { code: 'CPV', name: 'Cape Verde', group: 'H', flagEmoji: '🇨🇻' },
+  CPV: { code: 'CPV', name: 'Cabo Verde', group: 'H', flagEmoji: '🇨🇻' },
 
   FRA: { code: 'FRA', name: 'France', group: 'I', flagEmoji: '🇫🇷' },
   SEN: { code: 'SEN', name: 'Senegal', group: 'I', flagEmoji: '🇸🇳' },

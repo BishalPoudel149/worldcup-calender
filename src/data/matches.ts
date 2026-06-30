@@ -29,7 +29,7 @@ export const MATCHES: Match[] = [
 
   // Group H - Matchday 1
   { id: 'WC2026-013', matchNumber: 13, stage: 'group', group: 'H', matchday: 1, homeTeam: 'KSA', awayTeam: 'URU', homeLabel: 'Saudi Arabia', awayLabel: 'Uruguay', startUtc: '2026-06-15T22:00:00Z', durationMinutes: 105, venueId: 'hardrock' },
-  { id: 'WC2026-014', matchNumber: 14, stage: 'group', group: 'H', matchday: 1, homeTeam: 'ESP', awayTeam: 'CPV', homeLabel: 'Spain', awayLabel: 'Cape Verde', startUtc: '2026-06-15T16:00:00Z', durationMinutes: 105, venueId: 'mercedesbenz' },
+  { id: 'WC2026-014', matchNumber: 14, stage: 'group', group: 'H', matchday: 1, homeTeam: 'ESP', awayTeam: 'CPV', homeLabel: 'Spain', awayLabel: 'Cabo Verde', startUtc: '2026-06-15T16:00:00Z', durationMinutes: 105, venueId: 'mercedesbenz' },
 
   // Group G - Matchday 1
   { id: 'WC2026-015', matchNumber: 15, stage: 'group', group: 'G', matchday: 1, homeTeam: 'IRN', awayTeam: 'NZL', homeLabel: 'Iran', awayLabel: 'New Zealand', startUtc: '2026-06-16T01:00:00Z', durationMinutes: 105, venueId: 'sofi' },
@@ -76,7 +76,7 @@ export const MATCHES: Match[] = [
   { id: 'WC2026-036', matchNumber: 36, stage: 'group', group: 'F', matchday: 2, homeTeam: 'TUN', awayTeam: 'JPN', homeLabel: 'Tunisia', awayLabel: 'Japan', startUtc: '2026-06-21T04:00:00Z', durationMinutes: 105, venueId: 'bbva' },
 
   // Group H - Matchday 2
-  { id: 'WC2026-037', matchNumber: 37, stage: 'group', group: 'H', matchday: 2, homeTeam: 'URU', awayTeam: 'CPV', homeLabel: 'Uruguay', awayLabel: 'Cape Verde', startUtc: '2026-06-21T22:00:00Z', durationMinutes: 105, venueId: 'hardrock' },
+  { id: 'WC2026-037', matchNumber: 37, stage: 'group', group: 'H', matchday: 2, homeTeam: 'URU', awayTeam: 'CPV', homeLabel: 'Uruguay', awayLabel: 'Cabo Verde', startUtc: '2026-06-21T22:00:00Z', durationMinutes: 105, venueId: 'hardrock' },
   { id: 'WC2026-038', matchNumber: 38, stage: 'group', group: 'H', matchday: 2, homeTeam: 'ESP', awayTeam: 'KSA', homeLabel: 'Spain', awayLabel: 'Saudi Arabia', startUtc: '2026-06-21T16:00:00Z', durationMinutes: 105, venueId: 'mercedesbenz' },
 
   // Group G - Matchday 2
@@ -132,7 +132,7 @@ export const MATCHES: Match[] = [
   { id: 'WC2026-064', matchNumber: 64, stage: 'group', group: 'G', matchday: 3, homeTeam: 'NZL', awayTeam: 'BEL', homeLabel: 'New Zealand', awayLabel: 'Belgium', startUtc: '2026-06-27T03:00:00Z', durationMinutes: 105, venueId: 'bcplace' },
 
   // Group H - Matchday 3
-  { id: 'WC2026-065', matchNumber: 65, stage: 'group', group: 'H', matchday: 3, homeTeam: 'CPV', awayTeam: 'KSA', homeLabel: 'Cape Verde', awayLabel: 'Saudi Arabia', startUtc: '2026-06-27T00:00:00Z', durationMinutes: 105, venueId: 'nrg' },
+  { id: 'WC2026-065', matchNumber: 65, stage: 'group', group: 'H', matchday: 3, homeTeam: 'CPV', awayTeam: 'KSA', homeLabel: 'Cabo Verde', awayLabel: 'Saudi Arabia', startUtc: '2026-06-27T00:00:00Z', durationMinutes: 105, venueId: 'nrg' },
   { id: 'WC2026-066', matchNumber: 66, stage: 'group', group: 'H', matchday: 3, homeTeam: 'URU', awayTeam: 'ESP', homeLabel: 'Uruguay', awayLabel: 'Spain', startUtc: '2026-06-27T00:00:00Z', durationMinutes: 105, venueId: 'akron' },
 
   // Group L - Matchday 3
@@ -149,22 +149,22 @@ export const MATCHES: Match[] = [
 
   // ── ROUND OF 32 ────────────────────────────────────────────────────────────
 
-  { id: 'WC2026-073', matchNumber: 73, stage: 'round-of-32', homeTeam: null, awayTeam: null, homeLabel: 'Runner-up Group A', awayLabel: 'Runner-up Group B', startUtc: '2026-06-28T19:00:00Z', durationMinutes: 120, venueId: 'sofi' },
-  { id: 'WC2026-074', matchNumber: 74, stage: 'round-of-32', homeTeam: null, awayTeam: null, homeLabel: 'Winner Group E', awayLabel: '3rd Place (A/B/C/D/F)', startUtc: '2026-06-29T20:30:00Z', durationMinutes: 120, venueId: 'gillette' },
-  { id: 'WC2026-075', matchNumber: 75, stage: 'round-of-32', homeTeam: null, awayTeam: null, homeLabel: 'Winner Group F', awayLabel: 'Runner-up Group C', startUtc: '2026-06-30T01:00:00Z', durationMinutes: 120, venueId: 'bbva' },
-  { id: 'WC2026-076', matchNumber: 76, stage: 'round-of-32', homeTeam: null, awayTeam: null, homeLabel: 'Winner Group C', awayLabel: 'Runner-up Group F', startUtc: '2026-06-29T17:00:00Z', durationMinutes: 120, venueId: 'nrg' },
-  { id: 'WC2026-077', matchNumber: 77, stage: 'round-of-32', homeTeam: null, awayTeam: null, homeLabel: 'Winner Group I', awayLabel: '3rd Place (C/D/F/G/H)', startUtc: '2026-06-30T21:00:00Z', durationMinutes: 120, venueId: 'metlife' },
-  { id: 'WC2026-078', matchNumber: 78, stage: 'round-of-32', homeTeam: null, awayTeam: null, homeLabel: 'Runner-up Group E', awayLabel: 'Runner-up Group I', startUtc: '2026-06-30T17:00:00Z', durationMinutes: 120, venueId: 'att' },
-  { id: 'WC2026-079', matchNumber: 79, stage: 'round-of-32', homeTeam: null, awayTeam: null, homeLabel: 'Winner Group A', awayLabel: '3rd Place (C/E/F/H/I)', startUtc: '2026-07-01T01:00:00Z', durationMinutes: 120, venueId: 'azteca' },
-  { id: 'WC2026-080', matchNumber: 80, stage: 'round-of-32', homeTeam: null, awayTeam: null, homeLabel: 'Winner Group L', awayLabel: '3rd Place (E/H/I/J/K)', startUtc: '2026-07-01T16:00:00Z', durationMinutes: 120, venueId: 'mercedesbenz' },
-  { id: 'WC2026-081', matchNumber: 81, stage: 'round-of-32', homeTeam: null, awayTeam: null, homeLabel: 'Winner Group D', awayLabel: '3rd Place (B/E/F/I/J)', startUtc: '2026-07-01T20:00:00Z', durationMinutes: 120, venueId: 'levis' },
-  { id: 'WC2026-082', matchNumber: 82, stage: 'round-of-32', homeTeam: null, awayTeam: null, homeLabel: 'Winner Group G', awayLabel: '3rd Place (A/E/H/I/J)', startUtc: '2026-07-01T20:00:00Z', durationMinutes: 120, venueId: 'lumen' },
-  { id: 'WC2026-083', matchNumber: 83, stage: 'round-of-32', homeTeam: null, awayTeam: null, homeLabel: 'Runner-up Group K', awayLabel: 'Runner-up Group L', startUtc: '2026-07-02T23:00:00Z', durationMinutes: 120, venueId: 'bmo' },
-  { id: 'WC2026-084', matchNumber: 84, stage: 'round-of-32', homeTeam: null, awayTeam: null, homeLabel: 'Winner Group H', awayLabel: 'Runner-up Group J', startUtc: '2026-07-02T19:00:00Z', durationMinutes: 120, venueId: 'sofi' },
-  { id: 'WC2026-085', matchNumber: 85, stage: 'round-of-32', homeTeam: null, awayTeam: null, homeLabel: 'Winner Group B', awayLabel: '3rd Place (E/F/G/I/J)', startUtc: '2026-07-03T03:00:00Z', durationMinutes: 120, venueId: 'bcplace' },
-  { id: 'WC2026-086', matchNumber: 86, stage: 'round-of-32', homeTeam: null, awayTeam: null, homeLabel: 'Winner Group J', awayLabel: 'Runner-up Group H', startUtc: '2026-07-03T22:00:00Z', durationMinutes: 120, venueId: 'hardrock' },
-  { id: 'WC2026-087', matchNumber: 87, stage: 'round-of-32', homeTeam: null, awayTeam: null, homeLabel: 'Winner Group K', awayLabel: '3rd Place (D/E/I/J/L)', startUtc: '2026-07-04T01:30:00Z', durationMinutes: 120, venueId: 'arrowhead' },
-  { id: 'WC2026-088', matchNumber: 88, stage: 'round-of-32', homeTeam: null, awayTeam: null, homeLabel: 'Runner-up Group D', awayLabel: 'Runner-up Group G', startUtc: '2026-07-03T18:00:00Z', durationMinutes: 120, venueId: 'att' },
+  { id: 'WC2026-073', matchNumber: 73, stage: 'round-of-32', homeTeam: 'RSA', awayTeam: 'CAN', homeLabel: 'South Africa', awayLabel: 'Canada', startUtc: '2026-06-28T19:00:00Z', durationMinutes: 120, venueId: 'sofi' },
+  { id: 'WC2026-074', matchNumber: 74, stage: 'round-of-32', homeTeam: 'BRA', awayTeam: 'JPN', homeLabel: 'Brazil', awayLabel: 'Japan', startUtc: '2026-06-29T17:00:00Z', durationMinutes: 120, venueId: 'nrg' },
+  { id: 'WC2026-075', matchNumber: 75, stage: 'round-of-32', homeTeam: 'NED', awayTeam: 'MAR', homeLabel: 'Netherlands', awayLabel: 'Morocco', startUtc: '2026-06-30T01:00:00Z', durationMinutes: 120, venueId: 'bbva' },
+  { id: 'WC2026-076', matchNumber: 76, stage: 'round-of-32', homeTeam: 'GER', awayTeam: 'PAR', homeLabel: 'Germany', awayLabel: 'Paraguay', startUtc: '2026-06-29T20:30:00Z', durationMinutes: 120, venueId: 'gillette' },
+  { id: 'WC2026-077', matchNumber: 77, stage: 'round-of-32', homeTeam: 'FRA', awayTeam: 'SWE', homeLabel: 'France', awayLabel: 'Sweden', startUtc: '2026-06-30T21:00:00Z', durationMinutes: 120, venueId: 'metlife' },
+  { id: 'WC2026-078', matchNumber: 78, stage: 'round-of-32', homeTeam: 'BEL', awayTeam: 'SEN', homeLabel: 'Belgium', awayLabel: 'Senegal', startUtc: '2026-07-01T20:00:00Z', durationMinutes: 120, venueId: 'lumen' },
+  { id: 'WC2026-079', matchNumber: 79, stage: 'round-of-32', homeTeam: 'USA', awayTeam: 'BIH', homeLabel: 'United States', awayLabel: 'Bosnia and Herzegovina', startUtc: '2026-07-02T00:00:00Z', durationMinutes: 120, venueId: 'levis' },
+  { id: 'WC2026-080', matchNumber: 80, stage: 'round-of-32', homeTeam: 'ESP', awayTeam: 'AUT', homeLabel: 'Spain', awayLabel: 'Austria', startUtc: '2026-07-02T16:00:00Z', durationMinutes: 120, venueId: 'sofi' },
+  { id: 'WC2026-081', matchNumber: 81, stage: 'round-of-32', homeTeam: 'POR', awayTeam: 'CRO', homeLabel: 'Portugal', awayLabel: 'Croatia', startUtc: '2026-07-02T23:00:00Z', durationMinutes: 120, venueId: 'bmo' },
+  { id: 'WC2026-082', matchNumber: 82, stage: 'round-of-32', homeTeam: 'CIV', awayTeam: 'NOR', homeLabel: 'Ivory Coast', awayLabel: 'Norway', startUtc: '2026-06-30T17:00:00Z', durationMinutes: 120, venueId: 'att' },
+  { id: 'WC2026-083', matchNumber: 83, stage: 'round-of-32', homeTeam: 'MEX', awayTeam: 'ECU', homeLabel: 'Mexico', awayLabel: 'Ecuador', startUtc: '2026-07-01T01:00:00Z', durationMinutes: 120, venueId: 'azteca' },
+  { id: 'WC2026-084', matchNumber: 84, stage: 'round-of-32', homeTeam: 'ENG', awayTeam: 'COD', homeLabel: 'England', awayLabel: 'DR Congo', startUtc: '2026-07-01T16:00:00Z', durationMinutes: 120, venueId: 'mercedesbenz' },
+  { id: 'WC2026-085', matchNumber: 85, stage: 'round-of-32', homeTeam: 'SUI', awayTeam: 'ALG', homeLabel: 'Switzerland', awayLabel: 'Algeria', startUtc: '2026-07-03T03:00:00Z', durationMinutes: 120, venueId: 'bcplace' },
+  { id: 'WC2026-086', matchNumber: 86, stage: 'round-of-32', homeTeam: 'COL', awayTeam: 'GHA', homeLabel: 'Colombia', awayLabel: 'Ghana', startUtc: '2026-07-04T00:30:00Z', durationMinutes: 120, venueId: 'arrowhead' },
+  { id: 'WC2026-087', matchNumber: 87, stage: 'round-of-32', homeTeam: 'AUS', awayTeam: 'EGY', homeLabel: 'Australia', awayLabel: 'Egypt', startUtc: '2026-07-03T18:00:00Z', durationMinutes: 120, venueId: 'att' },
+  { id: 'WC2026-088', matchNumber: 88, stage: 'round-of-32', homeTeam: 'ARG', awayTeam: 'CPV', homeLabel: 'Argentina', awayLabel: 'Cabo Verde', startUtc: '2026-07-03T22:00:00Z', durationMinutes: 120, venueId: 'hardrock' },
 
   // ── ROUND OF 16 ────────────────────────────────────────────────────────────
 
